@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Special VSCode Chrome Debugger plugin's folder
+.chrome
+# Special VSCode Local History plugin's folder
+.history
