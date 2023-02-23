@@ -71,6 +71,9 @@ labels:
   - name: Help Wanted
     # Provide a new name to rename an existing label
     #new_name: first-timers-only
+    
+  - name: milestone: #1
+    color: '#ffffff'
 
 # Milestones: define milestones for Issues and Pull Requests
 milestones:
