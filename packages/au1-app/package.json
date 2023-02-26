@@ -86,11 +86,11 @@
       "<rootDir>/test/**/*.spec.ts"
     ],
     "moduleNameMapper": {
-      "^aurelia-binding$": "<rootDir>/node_modules/aurelia-binding"
+      "^aurelia-binding$": "<rootDir>/../../node_modules/aurelia-binding"
     },
     "modulePaths": [
       "<rootDir>/src",
-      "<rootDir>/node_modules"
+      "<rootDir>/../../node_modules"
     ],
     "moduleFileExtensions": [
       "ts",

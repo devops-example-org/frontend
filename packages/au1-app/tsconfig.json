@@ -25,6 +25,9 @@
     "src",
     "test"
   ],
+  "exclude": [
+    "test/coverage-jest",
+  ],
   "atom": {
     "rewriteTsconfig": false
   }
