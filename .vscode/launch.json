@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Default",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceRoot}/packages",
+      "userDataDir": "${workspaceRoot}/.chrome",
+      "sourceMapPathOverrides": {
+        "webpack://*": "${webRoot}/*"
+      }
+    }
+  ]
+}
