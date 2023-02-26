@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow yarn",
+    "postuninstall": "npx playwright install",
     "prepare": "husky install",
     "build": "turbo run --concurrency=4 build",
     "clean": "turbo run clean",
@@ -19,7 +20,8 @@
     "release": "yarn build && changeset publish",
     "test": "turbo run --concurrency=4 test",
     "test:ci": "turbo run --concurrency=2 test -- --maxWorkers=2 --forceExit",
-    "version": "changeset version && yarn install"
+    "version": "changeset version && yarn install",
+    "start": "turbo run --concurrency=1 start"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
@@ -28,8 +30,7 @@
     "@commitlint/config-lerna-scopes": "^17.4.2",
     "@manypkg/cli": "^0.20.0",
     "execa": "^7.0.0",
-    "husky": "^8.0.0",
-    "only-allow": "^1.1.1",
+    "husky": "^8.0.3",
     "turbo": "^1.8.2"
   }
 }
