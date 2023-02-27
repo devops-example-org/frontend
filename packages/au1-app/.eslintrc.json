@@ -27,5 +27,8 @@
     "browser": true,
     "node": true,
     "jest": true
-  }
+  },
+  "exclude": [
+    "webpack.config.js"
+  ]
 }

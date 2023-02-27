@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "@devops-example/*": ["*/src"]
+    }
+  },
+  "references": [
+    {
+       "path": "./packages/au1-component"
+    },
+    {
+       "path": "./packages/fast-components"
+    }
+  ]
+}

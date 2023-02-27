@@ -40,7 +40,7 @@ const sassRules = [
     loader: "sass-loader",
     options: {
       sassOptions: {
-        includePaths: ['node_modules']
+        includePaths: ['./node_modules', '../../node_modules']
       }
     }
   }
@@ -49,8 +49,7 @@ const sassRules = [
 module.exports = ({ production }, { analyze, hmr, port, host }) => ({
   resolve: {
     extensions: ['.ts', '.js'],
-    modules: ['src', 'node_modules', '../../node_modules'].map(x => path.resolve(x)),
-
+    modules: ['src', '../../node_modules'].map(x => path.resolve(x)),
     alias: {
       'src': path.resolve(__dirname, 'src'),
       // https://github.com/aurelia/dialog/issues/387
@@ -60,7 +59,8 @@ module.exports = ({ production }, { analyze, hmr, port, host }) => ({
       // https://github.com/aurelia/binding/issues/702
       // Enforce single aurelia-binding, to avoid v1/v2 duplication due to
       // out-of-date dependencies on 3rd party aurelia plugins
-      'aurelia-binding': path.resolve(__dirname, '../../node_modules/aurelia-binding')
+      'aurelia-binding': path.resolve(__dirname, '../../node_modules/aurelia-binding'),
+      '@devops-example/au1-component': path.resolve(__dirname, '../au1-component/src')
     }
   },
   entry: {

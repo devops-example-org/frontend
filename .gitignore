@@ -119,3 +119,5 @@ dist
 !.yarn/versions
 .turbo
 .pnp.cjs
+
+coverage-jest

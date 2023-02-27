@@ -1,5 +1,5 @@
 {
-  "name": "au1-app",
+  "name": "@devops-example/au1-app",
   "description": "An Aurelia client application.",
   "version": "0.1.0",
   "repository": {
@@ -112,12 +112,15 @@
       "!**/node_modules/**",
       "!**/test/**"
     ],
-    "coverageDirectory": "<rootDir>/test/coverage-jest",
+    "coverageDirectory": "<rootDir>/../../test/coverage-jest",
     "coverageReporters": [
       "json",
       "lcov",
       "text",
       "html"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

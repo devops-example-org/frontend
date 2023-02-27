@@ -6,10 +6,15 @@
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:8080",
-      "webRoot": "${workspaceRoot}/packages",
-      "userDataDir": "${workspaceRoot}/.chrome",
+      "webRoot": "${workspaceFolder}/packages",
+      "userDataDir": "${workspaceFolder}/.chrome",
       "sourceMapPathOverrides": {
-        "webpack://*": "${webRoot}/*"
+        "webpack:///./~/*": "../${webRoot}/node_modules/*",  
+        "webpack:///./*":   "${webRoot}/src/*",        
+        "webpack:///../*": "${webRoot}/src/*",         
+        "webpack:///*":     "*",                           
+        "webpack://${workspaceFolderBasename}/*": "${webRoot}/*",
+        "webpack://*": "${workspaceFolder}/*"
       }
     }
   ]

@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "esModuleInterop": true,
+    "composite": true,
     "module": "esnext",
     "typeRoots": [
       "../../node_modules/@types"
@@ -19,7 +20,10 @@
     "baseUrl": "src",
     "resolveJsonModule": true,
     "importHelpers": true,
-    "allowJs": true
+    "allowJs": true,
+    "paths": {
+      "@devops-example/*": ["../*/src"]
+    }
   },
   "include": [
     "src",
