@@ -1,5 +1,11 @@
 <template>
   <h1>${message}</h1>
 
-  <hello-world message.bind="message"></hello-world>
+  <input type="text" value.bind="message">
+
+  <hello-world message.two-way="message"></hello-world>
+
+  <name-tag greeting="Hola, " name.bind="message"></name-tag>
+
+  <my-app></my-app>
 </template>

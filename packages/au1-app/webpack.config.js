@@ -60,7 +60,8 @@ module.exports = ({ production }, { analyze, hmr, port, host }) => ({
       // Enforce single aurelia-binding, to avoid v1/v2 duplication due to
       // out-of-date dependencies on 3rd party aurelia plugins
       'aurelia-binding': path.resolve(__dirname, '../../node_modules/aurelia-binding'),
-      '@devops-example/au1-component': path.resolve(__dirname, '../au1-component/src')
+      '@devops-example/au1-component': path.resolve(__dirname, '../au1-component/src'),
+      '@devops-example/fast-components': path.resolve(__dirname, '../fast-components/src')
     }
   },
   entry: {

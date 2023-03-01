@@ -1,8 +1,8 @@
-import {StageComponent} from 'aurelia-testing';
+import {ComponentTester, StageComponent} from 'aurelia-testing';
 import {bootstrap} from 'aurelia-bootstrapper';
 
 describe('hello-world element', () => {
-  let component;
+  let component: ComponentTester<unknown> | null;
 
   afterEach(() => {
     if (component) {
@@ -12,7 +12,7 @@ describe('hello-world element', () => {
   });
 
   it('says hello world with message', done => {
-    let model = {message: 'from me'};
+    const model = {message: 'from me'};
 
     component = StageComponent
       .withResources('elements/hello-world')

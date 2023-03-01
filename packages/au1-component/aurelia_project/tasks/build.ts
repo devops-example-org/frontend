@@ -13,7 +13,7 @@ function clean() {
   return del(project.platform.output);
 }
 
-let build = gulp.series(
+const build = gulp.series(
   readProjectConfiguration,
   gulp.parallel(
     transpile,
@@ -31,7 +31,7 @@ if (CLIOptions.taskName() === 'build' && CLIOptions.hasFlag('watch')) {
   main = gulp.series(
     clean,
     build,
-    (done) => { watch(); done(); }
+    (done) => { watch({}); done(); }
   );
 } else {
   main = gulp.series(

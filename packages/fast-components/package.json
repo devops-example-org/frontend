@@ -9,21 +9,6 @@
     "start:dev": "webpack serve"
   },
   "license": "MIT",
-  "dependencies": {
-    "@microsoft/fast-components": "^2.30.6",
-    "@microsoft/fast-element": "^2.0.0-beta.21",
-    "@microsoft/fast-foundation": "^3.0.0-alpha.25",
-    "tslib": "^2.5.0"
-  },
-  "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0",
-    "resolve-typescript-plugin": "^2.0.0",
-    "ts-loader": "^9.4.2",
-    "typescript": "^4.9.5",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }

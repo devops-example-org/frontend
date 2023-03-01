@@ -1,14 +1,13 @@
 import {Aurelia} from 'aurelia-framework';
 import environment from '../config/environment.json';
 import { PLATFORM } from 'aurelia-pal';
-//import { HelloWorld } from '@devops-example/au1-component';
 
 export function configure(aurelia: Aurelia): void {
 
-  //const x = new HelloWorld();
   aurelia.use
     .standardConfiguration()
     .plugin(PLATFORM.moduleName('@devops-example/au1-component'))
+    .plugin(PLATFORM.moduleName('@devops-example/fast-components'))
     .feature(PLATFORM.moduleName('resources/index'));
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');

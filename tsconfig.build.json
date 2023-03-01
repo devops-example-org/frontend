@@ -12,7 +12,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "strictNullChecks": true,
     "declaration": false,
     "forceConsistentCasingInFileNames": true,
     "emitDecoratorMetadata": true,
@@ -23,8 +22,12 @@
     "sourceMap": true,
     "newLine": "lf",
     "downlevelIteration": true,
-    "inlineSources": true
+    "inlineSources": true,
+    "strictNullChecks": false
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     ".vscode",
     "dist",

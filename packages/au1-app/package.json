@@ -7,10 +7,6 @@
     "url": "???"
   },
   "license": "MIT",
-  "dependencies": {
-    "aurelia-animator-css": "^1.0.4",
-    "aurelia-bootstrapper": "^2.4.0"
-  },
   "devDependencies": {
     "@playwright/test": "^1.31.1",
     "@types/jest": "^29.4.0",
@@ -62,11 +58,11 @@
     "defaults"
   ],
   "scripts": {
-    "build": "webpack --env production",
-    "start": "webpack server",
-    "build:dev": "webpack",
+    "build": "webpack",
+    "build:prod": "webpack --env production",
+    "start": "webpack  serve --progress",
     "analyze": "webpack --env production --analyze",
-    "test": "au test",
+    "test": "jest",
     "e2e": "playwright test",
     "docker:build": "docker build -t au1-app:0.1.0 -t au1-app:latest .",
     "docker:start": "docker-compose up -d",
@@ -122,5 +118,9 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@devops-example/au1-component": "^0.1.0",
+    "@devops-example/fast-components": "^0.1.0"
   }
 }
