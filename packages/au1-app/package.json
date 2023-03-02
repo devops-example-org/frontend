@@ -66,7 +66,9 @@
     "e2e": "playwright test",
     "docker:build": "docker build -t au1-app:0.1.0 -t au1-app:latest .",
     "docker:start": "docker-compose up -d",
-    "docker:stop": "docker-compose down"
+    "docker:stop": "docker-compose down",
+    "cy": "cypress run",
+    "cy:dev": "cypress open --e2e --browser chrome"
   },
   "engines": {
     "node": ">=14.15.0"
