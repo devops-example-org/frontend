@@ -5,5 +5,5 @@ Then('I see the Application top-bar', () => {
 });
 
 Then('I see text KPMG on the top-bar', () => {
-  cy.contains('KPMG').should('have.text');
+  cy.contains('KPMG').should('exist');
 });

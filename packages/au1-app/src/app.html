@@ -6,7 +6,7 @@
 
   <div id="body-content">
     <div id="Header" class="docs-Header" data-testid="top-bar">
-      <a class="ms-font-xxl ms-fontColor-white" href="/">;asdfk;aslkf</a>
+      <a class="ms-font-xxl ms-fontColor-white" href="/">KPMG</a>
       <div class="Header-buttons">
         <a href="https://github.com/OfficeDev/office-ui-fabric-core/"
           class="Header-button ms-fontColor-white">Github</a>
@@ -51,13 +51,14 @@
       </div>
       <h1>Get Started</h1>
       <h2 id="quick-start">Quick start</h2>
-      <input type="text" value.bind="message">
 
-  <hello-world message.two-way="message"></hello-world>
+      <input type="text" data-testid="name-input" value.bind="message">
 
-  <name-tag greeting="Hola, " name.bind="message"></name-tag>
+      <hello-world message.two-way="message"></hello-world>
 
-  <my-app></my-app>
+      <name-tag greeting="Hola, " name.bind="message"></name-tag>
+
+      <my-app></my-app>
     </div>
   </div>
 

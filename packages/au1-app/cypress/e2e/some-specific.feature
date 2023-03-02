@@ -6,6 +6,6 @@ Feature: Some Specific Feature
         Background:
             Given A webbrowser is on application home page
 
-        Scenario: Display the application in an initial state
-             Then I enter the text David into textbox
-              And I see text David below
+        Scenario: The text entered to textbox should be displayed below
+             When I enter the text David into textbox
+             Then I see text David below

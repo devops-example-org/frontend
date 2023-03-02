@@ -6,6 +6,9 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('app', () => {
   test('shows message', async ({ page }) => {
-    await expect(page.locator('h1')).toHaveText('Hello World!');
+    await expect(
+      page.
+      locator('div[data-testid="top-bar"] >> a >> nth=0'))
+      .toHaveText('KPMG');
   });
 });

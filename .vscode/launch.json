@@ -15,9 +15,11 @@
       "sourceMapPathOverrides": {
         "webpack://@devops-example/au1-app/*": "${workspaceRoot}/packages/au1-app/*",
         "webpack://@devops-example/au1-component/*": "${webroot}/packages/au1-component/*",
-        "webpack://@devops-example/fast-components/*": "${webroot}/packages/fast-components/*",        
-        "**/node_modules/*": "${webroot}/node_modules/*",
-      }
+        "webpack://@devops-example/fast-components/*": "${webroot}/packages/fast-components/*"
+      },
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*"
+      ]
     }
   ]
 }

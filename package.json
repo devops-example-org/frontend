@@ -21,8 +21,9 @@
     "test:ci": "turbo run --concurrency=2 test -- --maxWorkers=2 --forceExit",
     "version": "changeset version && yarn install",
     "start": "cd packages/au1-app && turbo run --concurrency=2 start",
-    "cy": "cd packages/au1-app && cypress run",
-    "cy:dev": "cd packages/au1-app && cypress open --e2e --browser chrome"
+    "cy": "cd packages/au1-app && turbo run --concurrency=2 cy",
+    "cy:dev": "cd packages/au1-app && turbo run --concurrency=2 cy:dev",
+    "e2e": "cd packages/au1-app && yarn run e2e"
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
