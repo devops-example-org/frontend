@@ -3180,7 +3180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/is-ci@npm:^3.0.0":
+"@types/is-ci@npm:^3, @types/is-ci@npm:^3.0.0":
   version: 3.0.0
   resolution: "@types/is-ci@npm:3.0.0"
   dependencies:
@@ -9184,6 +9184,7 @@ __metadata:
     "@microsoft/fast-foundation": ^2.47.1-0
     "@microsoft/fast-web-utilities": ^6.0.0
     "@types/copyfiles": ^2.4.1
+    "@types/is-ci": ^3
     aurelia-binding: ^2.5.4
     aurelia-bootstrapper: ^2.4.0
     aurelia-dependency-injection: ^1.5.2
@@ -9212,6 +9213,7 @@ __metadata:
     cypress-visual-regression: ^2.1.1
     execa: ^7.0.0
     husky: ^8.0.3
+    is-ci: ^3.0.1
     office-ui-fabric-core: ^11.1.0
     resolve-typescript-plugin: ^2.0.0
     source-map-loader: ^4.0.1
