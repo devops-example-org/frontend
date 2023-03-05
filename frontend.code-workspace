@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"name": "✨ frontend",
+			"path": "."
+		},
+		{
+			"name": "📦 au1-app",
+			"path": "packages/au1-app"
+		},
+		{
+			"name": "📦 fast-components",
+			"path": "packages/fast-components"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"📦 fast-components",
+			"📦 au1-app"
+		]
+	}
+}

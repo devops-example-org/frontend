@@ -107,3 +107,17 @@ dist
 .chrome
 # Special VSCode Local History plugin's folder
 .history
+
+# Yarn Not-Zero-Installs
+# https://yarnpkg.com/getting-started/qa/#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.turbo
+.pnp.cjs
+
+coverage-jest

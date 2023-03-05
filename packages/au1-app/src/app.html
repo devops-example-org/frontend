@@ -1,0 +1,69 @@
+<template>
+  <require from="office-ui-fabric-core/src/documentation/sass/docs.scss"></require>
+  <require from="office-ui-fabric-core/src/sass/Fabric.scss"></require>
+
+  <h1>${message}</h1>
+
+  <div id="body-content">
+    <div id="Header" class="docs-Header" data-testid="top-bar">
+      <a class="ms-font-xxl ms-fontColor-white" href="/">KPMG</a>
+      <div class="Header-buttons">
+        <a href="https://github.com/OfficeDev/office-ui-fabric-core/"
+          class="Header-button ms-fontColor-white">Github</a>
+      </div>
+    </div>
+    <div class="docs-Page has-leftNav">
+      <div class="docs-Page-leftNav">
+        <div class="LeftNav-links" role="menu" aria-label="Anchor links for navigating this page">
+          <div class="LeftNav-item">
+            <a class="Typography LeftNav-link ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/Typography">Typography</a>
+          </div>
+          <div class="LeftNav-item">
+            <a class="Color LeftNav-link LeftNav-link--active ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/Color">Color</a>
+          </div>
+          <div class="LeftNav-item">
+            <a class="Icons LeftNav-link ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/Icons">Icons</a>
+          </div>
+          <div class="LeftNav-item">
+            <a class="Icons LeftNav-link ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/BrandIcons">BrandIcons</a>
+          </div>
+          <div class="LeftNav-item">
+            <a class="Animations LeftNav-link ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/Animations">Animations</a>
+          </div>
+          <div class="LeftNav-item">
+            <a class="Responsive-Grid LeftNav-link ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/Responsive-Grid">Responsive Grid</a>
+          </div>
+          <div class="LeftNav-item">
+            <a class="Localization LeftNav-link ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/Localization">Localization</a>
+          </div>
+          <div class="LeftNav-item">
+            <a class="Scoping LeftNav-link ms-border-color-themePrimary ms-font-l ms-font-color-neutralSecondary"
+              href="/Scoping">Scoping</a>
+          </div>
+        </div>
+      </div>
+      <h1>Get Started</h1>
+      <h2 id="quick-start">Quick start</h2>
+
+      <input type="text" data-testid="name-input" value.bind="message">
+
+      <hello-world message.two-way="message"></hello-world>
+
+      <name-tag greeting="Hola, " name.bind="message"></name-tag>
+
+      <my-app></my-app>
+    </div>
+  </div>
+
+
+
+
+  
+</template>
