@@ -8,5 +8,16 @@
   ],
   "devskim.ignoreRulesList": [
     "DS137138"
+  ],
+  "gitlens.autolinks": [
+  
+    {
+      "prefix": "issue: #",
+      "url": "https://github.com/devops-example-org/frontend/issues/<num>"
+    },
+    {
+      "prefix": "pr: #",
+      "url": "https://github.com/devops-example-org/frontend/pull/<num>"
+    }
   ]
 }
