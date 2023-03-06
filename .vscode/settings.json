@@ -19,5 +19,6 @@
       "prefix": "pr: #",
       "url": "https://github.com/devops-example-org/frontend/pull/<num>"
     }
-  ]
+  ],
+  "cmake.configureOnOpen": false
 }
