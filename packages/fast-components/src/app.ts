@@ -9,7 +9,7 @@ const template = html<App>`
   template
 })
 export class App extends FASTElement {
-  @observable contents: Array<any> = [
+  @observable contents: Array<unknown> = [
     'unicorn', 'fuck!', 'Me'
   ];
 

@@ -6,6 +6,6 @@ import { template } from "./my-tabs.template";
   template
 })
 export class MyTabs extends FASTElement {
-  @observable items: Array<any> = [];
+  @observable items: Array<unknown> = [];
 
 }
