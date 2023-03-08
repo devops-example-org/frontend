@@ -11,7 +11,7 @@ export class App {
     config.title = 'Contacts';
     config.map([
       { route: ['', 'home'],          moduleId: PLATFORM.moduleName('routes/home/index'),     name: 'home',    nav: true,   title: 'Home' },
-      //{ route: '/contacts',  moduleId: './contacts', name:'contacts', nav: true,   title: 'Contacts' }
+      { route: '/app-module-one',  moduleId: PLATFORM.moduleName('routes/app-module-one/index'), name:'app-module-one', nav: true,   title: 'The App Module #1' }
     ]);
 
     this.router = router;
