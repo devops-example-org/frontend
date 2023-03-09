@@ -1,10 +1,9 @@
----
 - name: "breaking-change"
   color: ee0701
   description: "A change that changes the API or breaks backward compatibility for users."
 - name: "bugfix"
   color: ee0701
-  description: "Inconsistencies or issues which will cause a problem for users or implementors."
+  description: "Inconsistencies in the code which will cause a problem for users or implementors."
 - name: "documentation"
   color: 0052cc
   description: "Solely about the documentation of the project."
@@ -13,7 +12,7 @@
   description: "Enhancement of the code, not introducing new features."
 - name: "refactor"
   color: 1d76db
-  description: "Updating the code with simpler, easier to understand or more efficient syntax or methods, but not introducing new features."
+  description: "The process of restructuring existing computer code, but not introducing new features."
 - name: "performance"
   color: 1d76db
   description: "Improving performance of the project, not introducing new features."
