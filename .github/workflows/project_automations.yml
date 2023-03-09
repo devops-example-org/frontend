@@ -28,6 +28,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          user: glyad
           organization: ${{ env.organization }}
           project_id: ${{ env.PROJECT_UUID }}
           resource_node_id: ${{ github.event.issue.node_id }}
@@ -41,6 +42,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          user: glyad
           organization: ${{ env.organization }}
           project_id: ${{ env.PROJECT_UUID }}
           resource_node_id: ${{ github.event.issue.node_id }}
@@ -54,6 +56,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          user: glyad
           organization: ${{ env.organization }}
           project_id: ${{ env.PROJECT_UUID }}
           resource_node_id: ${{ github.event.pull_request.node_id }}
@@ -67,6 +70,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          user: glyad
           organization: ${{ env.organization }}
           project_id: ${{ env.PROJECT_UUID }}
           resource_node_id: ${{ github.event.pull_request.node_id }}
