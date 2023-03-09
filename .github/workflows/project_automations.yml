@@ -30,7 +30,7 @@ jobs:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           user: sample-user
           # organization: sample-org
-          project_id: 1
+          project_id: PVT_kwDOB3-0Mc4AMOie
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.todo }} # Target status
   issue_closed:
@@ -44,7 +44,7 @@ jobs:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           user: sample-user
           # organization: sample-org
-          project_id: 1
+          project_id: PVT_kwDOB3-0Mc4AMOie
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.done }} # Target status
   pr_opened_or_reopened_or_reviewrequested:
@@ -72,6 +72,9 @@ jobs:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           user: sample-user
           # organization: sample-org
-          project_id: 1
+          project_id: PVT_kwDOB3-0Mc4AMOie
           resource_node_id: ${{ github.event.pull_request.node_id }}
           status_value: ${{ env.done }} # Target status
+
+
+
