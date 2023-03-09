@@ -30,7 +30,7 @@ jobs:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           user: glyad
           organization: ${{ env.organization }}
-          project_id: ${{ env.PROJECT_UUID }}
+          project_id: ${{ env.PROJECT_ID }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.todo }} # Target status
   issue_closed:
@@ -44,7 +44,7 @@ jobs:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           user: glyad
           organization: ${{ env.organization }}
-          project_id: ${{ env.PROJECT_UUID }}
+          project_id: ${{ env.PROJECT_ID }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.done }} # Target status
   pr_opened_or_reopened_or_reviewrequested:
@@ -58,7 +58,7 @@ jobs:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           user: glyad
           organization: ${{ env.organization }}
-          project_id: ${{ env.PROJECT_UUID }}
+          project_id: ${{ env.PROJECT_ID }}
           resource_node_id: ${{ github.event.pull_request.node_id }}
           status_value: ${{ env.in_progress }} # Target status
   pr_closed:
@@ -72,7 +72,7 @@ jobs:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           user: glyad
           organization: ${{ env.organization }}
-          project_id: ${{ env.PROJECT_UUID }}
+          project_id: ${{ env.PROJECT_ID }}
           resource_node_id: ${{ github.event.pull_request.node_id }}
           status_value: ${{ env.done }} # Target status
 
