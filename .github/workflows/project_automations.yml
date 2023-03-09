@@ -28,9 +28,8 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          user: sample-user
-          # organization: sample-org
-          project_id: PVT_kwDOB3-0Mc4AMOie
+          organization: ${{ env.organization }}
+          project_id: ${{ env.project_id }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.todo }} # Target status
   issue_closed:
@@ -42,9 +41,8 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          user: sample-user
-          # organization: sample-org
-          project_id: PVT_kwDOB3-0Mc4AMOie
+          organization: ${{ env.organization }}
+          project_id: ${{ env.project_id }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.done }} # Target status
   pr_opened_or_reopened_or_reviewrequested:
@@ -56,9 +54,8 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          user: sample-user
-          # organization: sample-org
-          project_id: PVT_kwDOB3-0Mc4AMOie
+          organization: ${{ env.organization }}
+          project_id: ${{ env.project_id }}
           resource_node_id: ${{ github.event.pull_request.node_id }}
           status_value: ${{ env.in_progress }} # Target status
   pr_closed:
@@ -70,9 +67,8 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
         with:
           gh_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          user: sample-user
-          # organization: sample-org
-          project_id: PVT_kwDOB3-0Mc4AMOie
+          organization: ${{ env.organization }}
+          project_id: ${{ env.project_id }}
           resource_node_id: ${{ github.event.pull_request.node_id }}
           status_value: ${{ env.done }} # Target status
 
