@@ -107,3 +107,5 @@ dist
 .chrome
 # Special VSCode Local History plugin's folder
 .history
+
+.yarn
