@@ -14,9 +14,13 @@ on:
 
 # map fields with customized labels
 env:
-  todo: Todo ✏️
-  done: Done ✅
+  todo: Todo ✏️  
   in_progress: In Progress 🚧
+  pending_review: Pending Review 🙏
+  in_review: In Review 👁️
+  to_merge: To Merge 📎
+  done: Done ✅
+  stale: Stale 🥀
   PROJECT_ID: 1
   organization: devops-example-org
   move_related_issues: true
