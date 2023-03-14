@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "plugin:cypress/recommended"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.eslint.json"],
+    "sourceType": "module"
+  }
+  
+}

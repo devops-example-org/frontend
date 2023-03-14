@@ -1,0 +1,15 @@
+{
+  "name": "@devops-example/fast-components",
+  "version": "0.1.0",
+  "description": "The first attempt to create fast component",
+  "main": "dist/main.js",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production",
+    "start:dev": "webpack serve"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "name": "@devops-example/au1-component",
+  "description": "An Aurelia plugin project.",
+  "version": "0.1.0",
+  "author": "David Kossoglyad <david@logoui.co.il>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devops-example-org/frontend"
+  },
+  "bugs": {
+    "url": "https://github.com/devops-example-org/frontend/issues"
+  },
+  "license": "MIT",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "old-build": "au build-plugin --env prod",
+    "build-ts:amd": "tsc -p tsconfig.build.json -t es5 -m amd      --outDir dist/amd",
+    "build-ts:cjs": "tsc -p tsconfig.build.json -t es5 -m commonjs --outDir dist/commonjs",
+    "build-ts:ntv": "tsc -p tsconfig.build.json -t es5 -m es6      --outDir dist/native-modules",
+    "build-ts:es6": "tsc -p tsconfig.build.json -t es6 -m es6      --outDir dist/es2015",
+    "build-ts:types": "tsc -p tsconfig.build.json --skipLibCheck -d --emitDeclarationOnly --declarationDir dist/types",
+    "build-assets:amd": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss dist/amd",
+    "build-assets:cjs": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss dist/commonjs",
+    "build-assets:ntv": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss dist/native-modules",
+    "build-assets:es6": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss dist/es2015",
+    "prebuild": "rimraf dist",
+    "build": "rimraf dist && concurrently \"npm:build-ts:*\" && concurrently \"npm:build-assets:*\"",
+    "start:dev": "au run",
+    "watch": "au build-plugin --watch",
+    "prepare": "yarn run build",
+    "pretest": "au lint",
+    "preversion": "au test",
+    "test": "au test"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "overrides": {
+    "chokidar": "^3.0.0",
+    "glob-stream": "^7.0.0",
+    "glob-parent": "^6.0.0",
+    "micromatch": "^4.0.0"
+  },
+  "main": "dist/commonjs/index.js",
+  "module": "dist/native-modules/index.js",
+  "typings": "dist/types/index.d.ts",
+  "private": true,
+  "files": [
+    "dist",
+    "*.scss"
+  ],
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/**/*.spec.ts"
+    ],
+    "moduleNameMapper": {
+      "^aurelia-binding$": "<rootDir>/../../node_modules/aurelia-binding",
+      "^.+\\.css$": "<rootDir>/test/mock-css"
+    },
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/node_modules"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(css|less|sass|scss|styl|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub",
+      "^.+\\.ts$": "ts-jest"
+    },
+    "setupFiles": [
+      "<rootDir>/test/jest-pretest.ts"
+    ],
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}",
+      "!**/*.spec.{js,ts}",
+      "!**/node_modules/**",
+      "!**/test/**"
+    ],
+    "coverageDirectory": "<rootDir>/../../test/coverage-jest",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
