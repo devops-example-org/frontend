@@ -99,8 +99,8 @@ const config: PlaywrightTestConfig = {
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm start',
-    port: 8080,
+    command: 'webpack serve --port 8081',
+    port: 8081,
   },
 };
 

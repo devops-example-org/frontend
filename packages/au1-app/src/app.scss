@@ -1,0 +1,51 @@
+.ms-Stack {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 49, 48);
+}
+
+.ms-FocusZone {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(50, 49, 48);
+}
+
+.ms-OverflowSet {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+ms-OverflowSetVertical {
+  flex-direction: column;
+}
+
+.ms-OverflowSet-item, .ms-OverflowSet-overflowButton {
+  flex-shrink: 0;
+  display: inherit;
+}
+
+.ms-Button--commandBar{ 
+  min-width: 40px;
+  background-color: white;
+  color: rgb(50, 49, 48);
+  padding: 0 4px;
+  border: none;  
+}
+
+.ms-Button--commandBar:focus {
+  inset: 2;
+  border-color: transparent;
+}
