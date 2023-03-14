@@ -6,8 +6,8 @@ import { template } from './name-tag.template';
   template
 })
 export class NameTag extends FASTElement {
-  @attr greeting: string = 'Hello';
-  @attr name: string = '';
+  @attr greeting = 'Hello';
+  @attr name = '';
 
   // optional method 
   greetingChanged() {

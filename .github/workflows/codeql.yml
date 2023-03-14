@@ -1,10 +1,10 @@
 name: CodeQL
        
 on:
-  push:
-    branches: [develop,feature/*]
-  pull_request:
-    branches: [develop,feature/*]
+  # push:
+    # branches: [develop,feature/*]
+  # pull_request:
+  #  branches: [develop,feature/*]
   schedule:
     #        ┌───────────── minute (0 - 59)
     #        │  ┌───────────── hour (0 - 23)

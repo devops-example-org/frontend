@@ -121,3 +121,4 @@ dist
 .pnp.cjs
 
 coverage-jest
+**/*.mp4

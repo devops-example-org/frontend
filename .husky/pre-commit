@@ -3,4 +3,4 @@
 
 yarn run e2e
 
-# yarn run cy
+yarn run cy
