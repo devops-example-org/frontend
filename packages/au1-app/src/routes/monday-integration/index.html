@@ -1,0 +1,157 @@
+<template>
+  <h1>Monday Integration</h1>
+
+  <!-- In order to show items I need a code to iterate it with repeater -->
+  
+  <div class="ms-Grid">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-sm6 ms-md4 ms-lg3">
+        <div class="ms-TextField is-required">
+          <div class="ms-TextField-wrapper">
+            <label for="name" class="ms-Label">Name</label>
+            <div class="ms-TextField-fieldGroup">
+              <input type="text" id="name" class="ms-TextField-field" value.bind="name">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-md4 ms-lg2">
+        <label class="ms-Label">Status</label>
+        <select value.bind="selectedStatus">
+          <option repeat.for="status of statuses" model.bind="status">${status}</option>
+        </select>
+      </div>        
+    </div>
+  </div>
+  <div class="ms-Grid">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-sm6 ms-md4 ms-lg3">
+        <div class="ms-TextField">
+          <div class="ms-TextField-wrapper">
+            <label for="name" class="ms-Label">Epics</label>
+            <div class="ms-TextField-fieldGroup">
+              <input type="text" id="name" class="ms-TextField-field" value.bind="epics">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-md4 ms-lg2">
+        <label class="ms-Label">Priority</label>
+        <select value.bind="selectedPriority">
+          <option repeat.for="priority of priorities" model.bind="priority">${priority}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="ms-Grid">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-lg1">
+        <div class="SubmitButton">
+          <button class="ms-Button ms-Button--primary" click.delegate="add()"><span class="ms-Button-label">Add</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="ms-DetailsList">
+    <div class="ms-DetailsHeader">
+      <div role="presentation" class="ms-DetailsList-headerWrapper">
+        <div class="ms-DetailsHeader-cell is-actionable" style="width: 410px;">
+          <span class="ms-DetailsHeader-cellName">Name</span></div>
+        <div class="ms-DetailsHeader-cell is-actionable" style="width: 160px;" repeat.for="column of columns">${column.title}</div>
+      </div>
+    </div>
+    <div class="ms-DetailsList-contentWrapper">
+      <template repeat.for="item of items">
+        <div class="ms-DetailsRow">
+          <div class="ms-DetailsRow-cell" style="width: 390px;">${item.name}</div>
+          <div class="ms-DetailsRow-cell" style="width: 150px;" repeat.for="cell of item.column_values">${cell.text}</div>
+        </div>
+      </template>
+      <template if.bind="items.length === 0">
+        <div class="ms-DetailsRow">No items found.</div>
+      </template>
+    </div>
+  </div>
+
+  <!-- <div class="root-333">
+    <div class="ms-Viewport" style="min-width: 1px; min-height: 1px;">
+      <div class="ms-DetailsList is-horizontalConstrained root-337" data-automationid="DetailsList"
+        data-is-scrollable="false">
+        <div role="grid" aria-rowcount="201" aria-colcount="3" aria-readonly="true">
+          <div role="presentation" class="ms-DetailsList-headerWrapper">
+            <div role="row" class="ms-FocusZone css-227 ms-DetailsHeader root-339" data-automationid="DetailsHeader"
+              data-focuszone-id="FocusZone1099">
+              <div role="columnheader" aria-sort="none" aria-colindex="2" class="ms-DetailsHeader-cell is-actionable"
+                data-is-draggable="false" draggable="false" data-automationid="ColumnsHeaderColumn"
+                data-item-key="column1" style="width: 220px;"><span class="cellTooltip-367">
+                  <span
+                    id="header1098-column1" aria-labelledby="header1098-column1-name"
+                    class="ms-DetailsHeader-cellTitle cellTitle-365" data-is-focusable="true" aria-haspopup="false"
+                    tabindex="0">
+                    <span class="ms-DetailsHeader-cellName cellName-366">Name</span>
+                  </span>
+              </div>
+              <div aria-hidden="true" role="button" data-is-focusable="false" data-sizer-index="0"
+                class="ms-DetailsHeader-cellSizer cellSizer-346 cellSizerStart-347" tabindex="-1"></div>
+              <div role="columnheader" aria-sort="none" aria-colindex="3"
+                class="ms-DetailsHeader-cell is-actionable root-359" data-is-draggable="false" draggable="false"
+                data-automationid="ColumnsHeaderColumn" data-item-key="column2" style="width: 1244px;"><span
+                  class="cellTooltip-367"><span id="header1098-column2" aria-labelledby="header1098-column2-name"
+                    class="ms-DetailsHeader-cellTitle cellTitle-365" data-is-focusable="true" aria-haspopup="false"
+                    tabindex="-1"><span id="header1098-column2-name"
+                      class="ms-DetailsHeader-cellName cellName-366">Value</span></span></span></div>
+              <div aria-hidden="true" role="button" data-is-focusable="false" data-sizer-index="1"
+                class="ms-DetailsHeader-cellSizer cellSizer-346 cellSizerEnd-348" tabindex="-1"></div>
+            </div>
+          </div>
+          <div role="presentation" class="ms-DetailsList-contentWrapper">
+            <div class="ms-SelectionZone" role="presentation">
+              <div class="ms-FocusZone" data-focuszone-id="FocusZone1100">
+                <div role="presentation" class="ms-List">
+                  <div role="presentation" class="ms-List-surface">
+                    <div class="ms-List-page" role="presentation">
+                      <div role="presentation" class="ms-List-cell" data-list-index="0" data-automationid="ListCell">
+                        <div data-is-focusable="true" id="row1253-0" role="row"
+                          class="ms-FocusZone css-227 ms-DetailsRow is-contentUnselectable root-373"
+                          data-selection-index="0" data-selection-touch-invoke="true" data-item-index="0"
+                          aria-rowindex="2" data-automationid="DetailsRow" aria-selected="false"
+                          data-focuszone-id="FocusZone1102" tabindex="0" style="min-width: 1424px;">
+                          <div role="gridcell" aria-colindex="1" data-selection-toggle="true"
+                            class="ms-DetailsRow-cell ms-DetailsRow-cellCheck checkCell-378">
+                            <div id="row1253-0-checkbox" aria-label="select row"
+                              aria-labelledby="row1253-0-checkbox row1253-0-header" role="checkbox"
+                              class="ms-DetailsRow-check ms-Check-checkHost check-355" aria-checked="false"
+                              data-selection-toggle="true" data-automationid="DetailsRowCheck" tabindex="-1">
+                              <div class="ms-Check root-356"><i data-icon-name="CircleRing" aria-hidden="true"
+                                  class="ms-Icon root-37 css-225 ms-Check-circle circle-357"
+                                  style="font-family: FabricMDL2Icons;"></i><i data-icon-name="StatusCircleCheckmark"
+                                  aria-hidden="true" class="ms-Icon root-37 css-225 ms-Check-check check-358"
+                                  style="font-family: FabricMDL2Icons;"></i></div>
+                            </div>
+                          </div>
+                          <div class="ms-DetailsRow-fields fields-380" data-automationid="DetailsRowFields"
+                            role="presentation">
+                            <div role="gridcell" aria-readonly="true" aria-colindex="2"
+                              class="ms-DetailsRow-cell cell-376 cellUnpadded-374" data-automationid="DetailsRowCell"
+                              data-automation-key="column1" style="width: 220px;">Item 0</div>
+                            <div role="gridcell" aria-readonly="true" aria-colindex="3"
+                              class="ms-DetailsRow-cell cell-376 cellUnpadded-374" data-automationid="DetailsRowCell"
+                              data-automation-key="column2" style="width: 1244px;">0</div>
+                          </div><span role="checkbox" class="checkCover-379" aria-checked="false"
+                            data-selection-toggle="true"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+</template>
