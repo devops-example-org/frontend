@@ -1,7 +1,5 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "html.suggest.angular1": false,
-  "html.suggest.ionic": false,
   "cSpell.words": [
     "execa",
     "testid"
@@ -20,5 +18,5 @@
       "url": "https://github.com/devops-example-org/frontend/pull/<num>"
     }
   ],
-  "cmake.configureOnOpen": false
+  "liquid.format.enable": true
 }
