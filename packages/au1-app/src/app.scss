@@ -1,3 +1,12 @@
+@import "resources/styles/components/details-list/DetailsHeader.scss";
+@import "resources/styles/components/details-list/DetailsList.scss";
+@import "resources/styles/components/details-list/DetailsRow.scss";
+@import "resources/styles/components/details-list/DetailsRowCheck.scss";
+
+.SubmitButton {
+  margin-top: 20px;
+}
+
 .ms-Stack {
   display: flex;
   flex-direction: column;
@@ -9,43 +18,73 @@
   color: rgb(50, 49, 48);
 }
 
-.ms-FocusZone {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: auto;
-    height: auto;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-    color: rgb(50, 49, 48);
-}
-
-.ms-OverflowSet {
-  position: relative;
+.ms-Grid-row {
+  @include ms-Grid-row;
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
-  flex-grow: 1;
-  align-items: stretch;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
 }
 
-ms-OverflowSetVertical {
+.ms-Grid-col {
+  @include ms-Grid-col;
+  display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
 }
 
-.ms-OverflowSet-item, .ms-OverflowSet-overflowButton {
-  flex-shrink: 0;
-  display: inherit;
-}
-
-.ms-Button--commandBar{ 
-  min-width: 40px;
-  background-color: white;
+.ms-Grid {
+  @include ms-Grid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
   color: rgb(50, 49, 48);
-  padding: 0 4px;
-  border: none;  
 }
 
-.ms-Button--commandBar:focus {
-  inset: 2;
-  border-color: transparent;
-}
+// .ms-FocusZone {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     width: auto;
+//     height: auto;
+//     box-sizing: border-box;
+//     background-color: rgb(255, 255, 255);
+//     color: rgb(50, 49, 48);
+// }
+
+// .ms-OverflowSet {
+//   position: relative;
+//   display: flex;
+//   flex-wrap: nowrap;
+//   flex-grow: 1;
+//   align-items: stretch;
+// }
+
+// ms-OverflowSetVertical {
+//   flex-direction: column;
+// }
+
+// .ms-OverflowSet-item, .ms-OverflowSet-overflowButton {
+//   flex-shrink: 0;
+//   display: inherit;
+// }
+
+// .ms-Button--commandBar{ 
+//   min-width: 40px;
+//   background-color: white;
+//   color: rgb(50, 49, 48);
+//   padding: 0 4px;
+//   border: none;  
+// }
+
+// .ms-Button--commandBar:focus {
+//   inset: 2;
+//   border-color: transparent;
+// }
